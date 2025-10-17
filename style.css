@@ -8,6 +8,15 @@
     src: url(fonts/Metropolis-Thin.otf);
 }
 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
 *{
     color: white;
     text-decoration: none;
@@ -20,6 +29,11 @@ body{
     background-color: rgb(0, 0, 26);
 }
 
+hr{
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /* navbar */
 .navbar{
     display: flex;
@@ -29,7 +43,9 @@ body{
 .navbar li{
     padding-top: 1rem;
     padding-right: 1.5rem;
+    padding-bottom: 1rem;
 }
+
 nav li a{
     color: white;
     font-size: 1rem;
@@ -37,7 +53,7 @@ nav li a{
 
 nav li a:hover {
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
 }
 
 .logo{
@@ -50,9 +66,10 @@ nav li a:hover {
 }
 
 /* main */
+
 main{
     position: relative;
-    min-height: 100vh;
+    min-height: 84.5vh;
 }
 
 .main{
@@ -67,7 +84,6 @@ main{
 .main h1{
     font-size: 5rem;
     font-weight: lighter;
-    animation: slide-in 1s ease-out;
 }
 
 .main h2{
@@ -94,12 +110,19 @@ main a img{
 
 #darrow{
     position: absolute;
-    bottom: 8rem;
+    bottom: 2rem;
     left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    animation: bounce 2s ease-in-out infinite;
 }
 
 #darrow img{
     width: 5rem;
+}
+
+#darrow img:hover {
+    transition: opacity 0.5s ease;
 }
 
 
