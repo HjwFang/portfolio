@@ -122,9 +122,6 @@ main{
 
 .iconbar li{
     border: white solid 1px;
-    padding: .5rem;
-    height: 1rem;
-    width: 1rem;
     border-radius: 8px;
 }
 
@@ -133,8 +130,14 @@ main{
     transition: all 0.3s ease;
 }
 
+.iconbar li a{
+    display: block;
+    padding: .5rem;
+    box-sizing: border-box;
+}
 
 .iconbar img{
+    display: block;
     width: 1rem;
     height: 1rem;
 }
@@ -148,7 +151,6 @@ main{
 }
 
 .main-right li{
-    padding: 1rem 2rem;
     border: 1px solid white;
     width: 200px;
     text-align: center;
@@ -160,6 +162,12 @@ main{
     background-color: white;
     transition: all 0.3s ease;
 
+}
+
+.main-right li a{
+    display: block;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
 }
 
 .main-right li:hover a{
@@ -215,7 +223,7 @@ main{
 }
 
 .container h2{
-    font-family: metropolis-light;
+    font-size: 1rem;
 }
 
 .container p{
@@ -241,13 +249,17 @@ main{
 }
 
 #contact .iconbar li{
-    padding: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
     border-radius: 12px;
 }
 
+#contact .iconbar li a{
+    display: block;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
 #contact .iconbar img{
+    display: block;
     width: 1.5rem;
     height: 1.5rem;
 }
