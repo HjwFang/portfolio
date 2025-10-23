@@ -62,11 +62,14 @@
                     <div class="gallery-grid">
                         <!-- Add your images here -->
                         <!-- Example structure:
-                        <div class="gallery-item">
+                        <div class="gallery-item" onclick="openLightbox(0)">
                             <img src="imgs/tsac/image1.jpg" alt="Description">
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item" onclick="openLightbox(1)">
                             <img src="imgs/tsac/image2.jpg" alt="Description">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(2)">
+                            <img src="imgs/tsac/image3.jpg" alt="Description">
                         </div>
                         -->
                     </div>
@@ -79,6 +82,19 @@
                 <a href="index.html#works" class="nav-btn">← Back to Works</a>
             </div>
         </main>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <button class="lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+                <img id="lightbox-image" src="" alt="">
+                <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+
+        <script src="gallery.js"></script>
         <hr>
     </body>
 </html>
